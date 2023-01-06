@@ -3,7 +3,7 @@ import axios from "axios";
 import { User, ERROR } from "../../Model/Model";
 import { useQuery } from "react-query";
 import UserCard from "../User/UserCard";
-import { calculateAge } from "../../Helpers/Helpers";
+import { calculateAge, deleteSymbols } from "../../Helpers/Helpers";
 import Error from "../Error/Error";
 
 const Req = () => {
@@ -53,7 +53,7 @@ const Req = () => {
           className="outline-none placeholder-slate-500 text-black caret-pink-400 w-[70%] border-[1px] border-slate-300 sm:border-none  py-1 px-2 rounded-lg sm:w-full text-sm sm:text-base  md:text-xl"
           placeholder="Digite su cedula"
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-            setCedula(e.target.value);
+            setCedula(deleteSymbols(e.target.value));
           }}
         />
         <button className="group">

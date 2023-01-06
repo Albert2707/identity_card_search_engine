@@ -14,6 +14,11 @@ export const calculateAge = (userAge: string): number => {
   return currentAge;
 };
 
+export const deleteSymbols = (str: string): string => {
+ return str.replace(/[-,?,_,¿,(,),&,<,>,$,@,!]/gi,"").trim()
+
+};
+
 export const civilState = (gender: string, state: string): string =>
   gender === "M"
     ? state === "C"

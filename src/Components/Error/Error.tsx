@@ -8,7 +8,7 @@ interface Prop {
 
 const Error: FC<Prop> = ({ error, setItError }) => {
   return (
-    <div className="bg-red-100 flex justify-center absolute gap-3 p-3  w-[80%] sm:w-auto  rounded-lg -top-12">
+    <div className="bg-red-100 flex justify-center items-center absolute gap-3 p-3  w-[80%] sm:w-auto  rounded-lg -top-12">
       <strong className="text-red-700 text-xs sm:text-base">{error}</strong>
       <button
         onClick={() => {
