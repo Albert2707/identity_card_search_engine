@@ -6,7 +6,7 @@ function App() {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col relative">
         <div className=" mt-14 container mx-auto flex-1">
           <Req />
         </div>
